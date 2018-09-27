@@ -1,7 +1,7 @@
 // import the usr scheme
 const User = require('./user');
 
-var createUser =  (req, res, next) => {
+const createUser =  (req, res, next) => {
     var user = new User(req.body);
 
     user.save((err) => {
@@ -13,7 +13,7 @@ var createUser =  (req, res, next) => {
     });
 };
 
-var getAllUsers = (req, res, next) => {
+const getAllUsers = (req, res, next) => {
     User.find((err, users) => {
         if (err) {
             next(err);
@@ -23,4 +23,14 @@ var getAllUsers = (req, res, next) => {
     });
 };
 
-module.exports = { createUser, getAllUsers};
+const getByUserId = function (req, res, next) {
+    User.findById(req.params.userId, function (err, user) {
+        if (err) {
+            next(err);
+        } else {
+            res.json(user);
+        }
+    });
+};
+
+module.exports = { createUser, getAllUsers, getByUserId };

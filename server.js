@@ -29,8 +29,8 @@ router.get('/api', (req, resp, next) => {
     });
 });
 
-router.route('/api/users')
-    .post(userOps.createUser)
-    .get(userOps.getAllUsers);
+router.post('/api/users', userOps.createUser);
+router.get('/api/users', userOps.getAllUsers);
+router.get('/api/users/:userId', userOps.getByUserId);
 
 server.use('/', router);
