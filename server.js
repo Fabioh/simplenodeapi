@@ -16,3 +16,14 @@ server.use(cors());
 server.listen(PORT, () => {
     console.log(`Server is running in port ${PORT}`);
 });
+
+// create the routes to recieve the request
+const router = express.Router();
+
+router.get('/api', (req, resp, next) => {
+    resp.status(200).json({
+        message: 'Hello TED Anapro - from Nodejs'
+    });
+});
+
+server.use('/', router);
