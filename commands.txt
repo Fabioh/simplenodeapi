@@ -1,0 +1,18 @@
+# Inicia o projeto utilizando o npm,  
+#
+# -y significa que o responderemos todas as 
+# perguntas com a resposta padrão
+npm init -y
+
+# Instala o pacote nodemon de monitoramento dos arquivos
+# como dependencia de desenvolvimento 
+npm install --save-dev nodemon
+
+# Instala o pacote ExpressJs, framework web de nodejs
+npm i --save express
+
+# Instala o pacote body-parser, framework efetuar o parser da requisições web
+npm i --save body-parser
+
+# Instala o pacote mongoose, framework para abstração e da conexão e mapeamento object 2 document
+npm i --save mongoose
