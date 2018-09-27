@@ -14,5 +14,17 @@ npm i --save express
 # Instala o pacote body-parser, framework efetuar o parser da requisições web
 npm i --save body-parser
 
+# Instala o framework cors para permitir requisções, a partir do browser, 
+# de outros domínios
+npm install --save cors
+
 # Instala o pacote mongoose, framework para abstração e da conexão e mapeamento object 2 document
 npm i --save mongoose
+
+# Alterar o arquivo package.json
+# incluir dentro de scripts o "dev": "nodemon"
+
+# Inicia a aplicação, utilizando o nodemon
+npm run dev
+# ou 
+node server.js
