@@ -17,7 +17,7 @@ server.listen(PORT, () => {
     console.log(`Server is running in port ${PORT}`);
 });
 
-// create the routes to recieve the request
+// create the routes to receive the requests
 const router = express.Router();
 
 router.get('/api', (req, resp, next) => {
