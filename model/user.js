@@ -1,8 +1,4 @@
 const mongoose = require('mongoose');
-const env = require('./.env');
-
-console.log(`Connectionstring: ${env.connstr}`);
-mongoose.connect(env.connstr)
 
 const User = new mongoose.Schema({
     email: {

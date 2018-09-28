@@ -1,5 +1,5 @@
 // import the user scheme
-const User = require('./user');
+const User = require('../model/user');
 
 const createUser =  (req, res, next) => {
     var user = new User(req.body);
