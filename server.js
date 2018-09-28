@@ -1,7 +1,7 @@
 const PORT = 65000;
 const bodyParser = require('body-parser');
 const express = require('express');
-const cors = require('cors');
+const myCors = require('./myCors');
 
 const server = express();
 
@@ -11,7 +11,7 @@ const server = express();
 server.use(bodyParser.json());
 
 // allow cors for all routes
-server.use(cors());
+server.use(myCors);
 
 server.listen(PORT, () => {
     console.log(`Server is running in port ${PORT}`);
