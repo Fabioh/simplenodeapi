@@ -4,6 +4,9 @@ const express = require('express');
 const cors = require('cors');
 const server = express();
 
+
+const indexRoute = require('./routes/index-routes');
+
 const userOps = require('./userOperations');
 
 // applying the express middleware
@@ -23,11 +26,7 @@ server.listen(PORT, () => {
 const router = express.Router();
 
 // define a simple hello world route
-router.get('/api', (req, resp, next) => {
-    resp.status(200).json({
-        message: 'Hello TED Anapro - from Nodejs'
-    });
-});
+router.get('/api', indexRoute);
 
 router.post('/api/users', userOps.createUser);
 router.get('/api/users', userOps.getAllUsers);
