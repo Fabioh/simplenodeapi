@@ -8,6 +8,7 @@ const server = express();
 const env = require('./.env');
 mongoose.connect(env.connstr);
 
+mongoose.Error.messages.general.required = 'O atributo "{PATH}" é obrigatório.';
 const indexRoute = require('./routes/index-routes');
 const userRoute = require('./routes/user-routes');
 
