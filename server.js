@@ -32,5 +32,6 @@ router.get('/api', (req, resp, next) => {
 router.post('/api/users', userOps.createUser);
 router.get('/api/users', userOps.getAllUsers);
 router.get('/api/users/:userId', userOps.getByUserId);
+router.delete('/api/users/:userId', userOps.deleteUser);
 
 server.use('/', router);
